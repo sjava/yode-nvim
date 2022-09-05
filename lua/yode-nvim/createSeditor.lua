@@ -9,7 +9,7 @@ local getFileBufferName = function(fileBufferId, seditorBufferId)
     if ext ~= '' then
         ext = '.' .. ext
     end
-    return 'yode://' .. vim.fn.bufname(fileBufferId) .. ':' .. seditorBufferId .. ext
+    return vim.fn.bufname(fileBufferId) .. ':' .. seditorBufferId .. ext .. '*.yode'
 end
 
 local createSeditor = function(opts)
